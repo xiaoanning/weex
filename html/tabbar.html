@@ -1,0 +1,30 @@
+
+  <div class = "body" >
+
+      <div class="controller" id="controllerid" v-bind:style="toolBar.beSelectedIndex==0 ? controller.c1 : (toolBar.beSelectedIndex==1 ? controller.c2 :(controller.c3))"> </div>
+
+      <div class = "toolbar" id="toolbarid"  ref="toolbarref">
+
+        <div  v- class="toolbar_btn" 
+              v-for="(menu,index) in toolBar.menus"
+              v-bind:style = "index == toolBar.beSelectedIndex ? toolBar.item.noSelected : toolBar.item.selected"
+              v-on:click="switchTab(index)">
+                <image v-bind:style = "{width:toolBar.item.image.width,height:toolBar.item.image.height}"
+                        v-bind:placeholder = "menu.defaultImg"
+                        v-bind:src =  "index == toolBar.beSelectedIndex ? menu.imgSelected : menu.img"
+                        resize = 'cover'
+                ></image>
+
+
+                <text class = "toolbar_btntitle"
+                      v-bind:style = "index == toolBar.beSelectedIndex ? toolBar.item.selected : toolBar.item.noSelected">{{ index == toolBar.beSelectedIndex ?menu.selectedText : menu.text }}</text>
+                <button style = "position: absolute;height:100%;width:100%;backgroundColor:rgba(0, 0, 0, 0.0)" v-on:click="switchTab(index)"></button>
+                
+        </div>
+      
+
+      </div>
+
+  </div>
+
+

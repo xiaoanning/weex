@@ -1,0 +1,68 @@
+
+
+  .body
+  {
+    flex-direction:  column;
+    margin: 0px ;
+
+    height: 750px;
+    position:fixed;
+    bottom:0px ;
+    left:0px;
+    right:0px;
+    top:0px;
+
+    background-color: gray ;
+  }
+
+  
+  .toolbar
+  {
+    background-color: #EEE;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position:fixed;
+    bottom:0 ;
+    left:0;
+    right:0;
+
+    height : 88px ;
+
+  }
+  .toolbar_btn
+  {
+    flex: 1;
+
+    text-align : center;
+    font-size : 24px ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+  }
+  .toolbar_btntitle
+  {
+      text-align : center;
+  }
+
+  .controller
+  {    
+    flex-direction: column;
+    width: this.screenWidth+'px' ;
+    height: this.controller.height+'px' ;
+    background-color: blue ;
+
+    position:fixed;
+    top:0 ;
+    left:0;
+    right:0;
+    bottom: 88px;
+  }
+
